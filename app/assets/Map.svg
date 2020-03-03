@@ -1,0 +1,26 @@
+<svg id="Map" xmlns="http://www.w3.org/2000/svg" width="100" height="100" viewBox="0 0 100 100">
+  <defs>
+    <style>
+      .cls-1 {
+        fill: #32fca8;
+      }
+      .cls-1:hover{
+        fill:#A6FFDA;
+      }
+    </style>
+  </defs>
+  <g id="Group_3" data-name="Group 3">
+    <g id="Group_2" data-name="Group 2">
+      <path id="Path_2" data-name="Path 2" class="cls-1" d="M15.816,86.473A50,50,0,0,0,62.9,98.312l-29.46-29.46Z"/>
+      <path id="Path_3" data-name="Path 3" class="cls-1" d="M98.091,63.677A50.028,50.028,0,0,0,98.312,37.1l-13.4,13.4Z"/>
+      <path id="Path_4" data-name="Path 4" class="cls-1" d="M32.438,33.977,14.79,51.625v0a1,1,0,1,1-1.414-1.414s0,0,0,0L31.023,32.562l-17.13-17.13a49.963,49.963,0,0,0,.488,69.647L48.961,50.5ZM28.26,53.2a3.912,3.912,0,0,1,7.824,0l-3.913,6.038Z"/>
+      <rect id="Rectangle_1" data-name="Rectangle 1" class="cls-1" width="21.423" height="46.791" transform="translate(33.851 32.565) rotate(-45)"/>
+      <path id="Path_5" data-name="Path 5" class="cls-1" d="M62.1,1.483a50.025,50.025,0,0,0-25.778.426L49,14.585Z"/>
+      <path id="Path_6" data-name="Path 6" class="cls-1" d="M47.585,16,34.162,2.576A49.976,49.976,0,0,0,15.3,14.015L32.438,31.148Z"/>
+      <path id="Path_7" data-name="Path 7" class="cls-1" d="M34.852,67.438,65.091,97.677a49.963,49.963,0,0,0,19.477-11.57L50.375,51.914Z"/>
+      <path id="Path_8" data-name="Path 8" class="cls-1" d="M83.5,49.086,97.677,34.909A50.1,50.1,0,0,0,64.32,2.092L50.414,16Z"/>
+      <path id="Path_9" data-name="Path 9" class="cls-1" d="M68.352,67.062,85.985,84.695A49.966,49.966,0,0,0,97.424,65.838L83.5,51.914Z"/>
+      <circle id="Ellipse_1" data-name="Ellipse 1" class="cls-1" cx="1.812" cy="1.812" r="1.812" transform="translate(30.361 51.056)"/>
+    </g>
+  </g>
+</svg>

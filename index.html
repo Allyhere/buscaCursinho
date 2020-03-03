@@ -1,0 +1,145 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link
+      rel="stylesheet"
+      href="https://unpkg.com/leaflet@1.6.0/dist/leaflet.css"
+      integrity="sha512-xwE/Az9zrjBIphAcBb3F6JVqxf46+CDLwfLMHloNu6KEQCAWi6HcDUbeOfBIptF7tcCzusKFjFw2yuvEpDL9wQ=="
+      crossorigin=""
+    />
+    <script
+      src="https://unpkg.com/leaflet@1.6.0/dist/leaflet.js"
+      integrity="sha512-gZwIG9x3wUXg2hdXF6+rVkLF/0Vi9U8D2Ntg4Ga5I5BZpVkVxlJWbSQtXPSiUTtC0TjtGOmxa1AJPuV0CPthew=="
+      crossorigin=""
+    ></script>
+    <script src="./node_modules/geolib/lib/index.js"></script>
+    <script src="./node_modules/axios/dist/axios.min.js"></script>
+    <script src="https://use.fontawesome.com/32a3e6497d.js"></script>
+    <link rel="stylesheet" href="app/css/main.css" />
+    <title>Mapa dos cursinhos</title>
+  </head>
+  <body>
+    <div class="container" id="mainContainer">
+      <nav class="sidebar">
+        <a href="#" class="sidebar__link"
+          ><img
+            src="./app/assets/Map.svg"
+            alt="Mapa dos cursisnhos"
+            class="sidebar__logo"
+        /></a>
+        <div class="sidebar__container" id="navBtnContainer">
+          <div class="sidebar__link" id="searchCourse">
+            <i class="fa fa-search" aria-hidden="true"></i>
+          </div>
+          <a
+            href="#"
+            class="sidebar__link"
+            id="addCourse"
+            onclick="changeScreen(this)"
+            ><i class="fa fa-plus-circle" aria-hidden="true"></i
+          ></a>
+          <a
+            href="#"
+            class="sidebar__link"
+            id="listCourse"
+            onclick="changeScreen(this)"
+            ><i class="fa fa-list" aria-hidden="true"></i
+          ></a>
+        </div>
+      </nav>
+      <section class="result" id="searchContainer">
+        <form action="" method="get" class="search">
+          <input
+            type="search"
+            name="search"
+            id="search"
+            class="input input__search"
+            placeholder="Busque por um cursinho ou local"
+          />
+          <input
+            type="submit"
+            value="Buscar"
+            class="input input__search--submit"
+            id="submitAddress"
+            onclick="getLocation()"
+          />
+        </form>
+        <div class="result__error" id="error">
+          Acho que cê digitou a rua errado mano
+        </div>
+        <div class="tag">
+          <ul class="tag__container" id="tag">
+            <li class="tag__item tag__item--red">Exemplo</li>
+            <li class="tag__item tag__item--green">Exemplo</li>
+            <li class="tag__item tag__item--lilac">Exemplo</li>
+            <li class="tag__item tag__item--blue">Exemplo</li>
+            <li class="tag__item">Exemplo</li>
+          </ul>
+        </div>
+        <div class="result__container" id="result">
+          <div class="course">
+            <div class="course__info">
+              <h2 class="title" id="title">Cursinho Educamandela</h2>
+              <h3 class="subtitle" id="address">
+                Rua Tenente Miguel Délia, 524 - 08021-090
+              </h3>
+              <ul class="tag__container" id="tag">
+                <li class="tag__item tag__item--red">Exemplo</li>
+                <li class="tag__item tag__item--green">Exemplo</li>
+              </ul>
+              <p class="text" id="desc">
+                Lorem, ipsum dolor sit amet consectetur adipisicing elit.
+                Soluta, autem minima? Aspernatur necessitatibus in ex, repellat
+                libero, quo, deserunt ipsa deleniti delectus repellendus dolore
+                voluptatem!
+              </p>
+              <p class="text text--blue" id="func">
+                De seg a sex das 18:00 às 22:00
+              </p>
+              <div class="course__interact">
+                <div class="course__rate">
+                  <i class="fa fa-star" aria-hidden="true"></i>
+                  <i class="fa fa-star" aria-hidden="true"></i>
+                  <i class="fa fa-star" aria-hidden="true"></i>
+                  <i class="fa fa-star" aria-hidden="true"></i>
+                  <i class="fa fa-star" aria-hidden="true"></i>
+                </div>
+                <button class="btn course__btn">Inscreva-se</button>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+      <map name="mapa" class="map" id="map">
+        <div class="map__choose" id="mapChoose">
+          <img
+            src="app/assets/Street.png"
+            alt="Mapa das ruas"
+            class="map__ico"
+            id="mapStreet"
+            onclick="chooseTile(this)"
+          />
+          <img
+            src="app/assets/Simple.png"
+            alt="Mapa simples"
+            class="map__ico"
+            id="mapSimple"
+            onclick="chooseTile(this)"
+          />
+          <img
+            src="app/assets/Satelite.png"
+            alt="Mapa satélite"
+            class="map__ico"
+            id="mapSatelite"
+            onclick="chooseTile(this)"
+          />
+        </div>
+      </map>
+    </div>
+
+    <!-- <script src="app/js/geolib.js" defer></script> -->
+    <script src="app/js/map.js" defer></script>
+  </body>
+</html>

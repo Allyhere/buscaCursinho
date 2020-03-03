@@ -1,0 +1,26 @@
+{
+  "educamandela": {
+    "nome": "Cursinho Educamandela",
+    "endereco": "R. Cristóvão Colombo, 223 - Jardim Vila Galvao, Guarulhos - SP, 07054-030",
+    "coordenadas": ["-23.46243", "-46.5618787"],
+    "desc": "Cursinho popular localizado na vila Galvão com foco em jovens",
+    "diasFunc": ["sab", "dom"],
+    "horario": [9, 13]
+  },
+  "mandelafree": {
+    "nome": "Cursinho Mandelafree",
+    "endereco": "rua antonio artoni 74",
+    "coordenadas": ["-23.4436881", "-46.522591"],
+    "desc": "Cursinho popular localizado na vila Galvão com foco em jovens",
+    "diasFunc": ["sab", "dom"],
+    "horario": [9, 13]
+  },
+  "coraCoralina": {
+    "nome": "Cursinho Cora Coralina",
+    "endereco": "Rua Arnaldo Cintra 416",
+    "coordenadas": ["-23.5255703", "-46.5633254"],
+    "desc": "Cursinho popular localizado na vila Galvão com foco em jovens",
+    "diasFunc": ["sab", "dom"],
+    "horario": [9, 13]
+  }
+}

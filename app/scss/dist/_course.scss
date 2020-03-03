@@ -1,0 +1,57 @@
+@import "variables";
+
+.course {
+  height: fit-content;
+  height: -webkit-fit-content;
+  width: 100%;
+  padding: 2%;
+  margin-bottom: 20px;
+  border-bottom: 1px solid $green;
+  // transform: scale(0);
+  // opacity: 0;
+  // transform-origin: top left;
+  // // animation: popin 0.3s forwards ease-in;
+  &__info {
+  }
+  &__card {
+    display: flex;
+    flex-wrap: nowrap;
+  }
+  &__interact {
+    width: 100%;
+    display: flex;
+    flex-wrap: nowrap;
+    justify-content: space-between;
+    align-items: center;
+    padding: 2% 0;
+  }
+  &__btn {
+    background: $lilac;
+    width: fit-content;
+    height: fit-content;
+    max-height: 60px;
+    padding: 8px 12px;
+    border-radius: 8px;
+    box-shadow: 3px 3px 6px rgba(15, 15, 15, 0.1);
+    font: {
+      size: 12pt;
+      weight: 600;
+    }
+    color: $white;
+    &:hover {
+      background: lighten($lilac, 10%);
+      transition: all 0.8s ease-in-out;
+    }
+  }
+}
+
+@keyframes popin {
+  from {
+    transform: scale(0);
+    opacity: 0;
+  }
+  to {
+    transform: scale(1);
+    opacity: 1;
+  }
+}

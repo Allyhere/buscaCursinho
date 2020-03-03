@@ -1,0 +1,13 @@
+<svg id="Location" xmlns="http://www.w3.org/2000/svg" width="280" height="365" viewBox="0 0 280 365">
+  <defs>
+    <style>
+      .cls-1 {
+        fill: #b232fc;
+        fill-rule: evenodd;
+      }
+    </style>
+  </defs>
+  <g id="Group_1" data-name="Group 1">
+    <path id="Path_1" data-name="Path 1" class="cls-1" d="M140,0c77,0,140,63,140,140,0,78-85,179-140,225C85,319,0,218,0,140,0,63,63,0,140,0Zm0,77a63,63,0,1,1-63,63A62.738,62.738,0,0,1,140,77Z"/>
+  </g>
+</svg>

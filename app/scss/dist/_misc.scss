@@ -1,0 +1,67 @@
+@import "variables";
+
+/*
+* Scroll tracks------------------
+*/
+
+//global scroll
+::-webkit-scrollbar-track {
+  background: $lightgrey;
+  border-radius: 15px;
+}
+
+//tag container scroll
+.tag__container::-webkit-scrollbar {
+  height: 6px;
+}
+
+.tag__container::-webkit-scrollbar-thumb {
+  background-color: transparentize($grey, 0.9);
+}
+
+//course scroll
+.result__container::-webkit-scrollbar {
+  width: 6px;
+}
+.result__container::-webkit-scrollbar-thumb {
+  background-color: transparentize($grey, 0.9);
+}
+
+/*
+* Map Controls------------------
+*/
+
+.leaflet-bar {
+  box-shadow: 3px 3px 6px rgba(15, 15, 15, 0.1);
+  a {
+    background: $lilac;
+    color: $white;
+    border: none;
+    &:hover {
+      background: darken($lilac, 20%);
+      color: $white;
+      transition: all 0.6s ease-in-out;
+      border: none;
+    }
+  }
+}
+
+/*
+* Icons------------------
+*/
+
+.fa {
+  color: $white;
+  font-size: 18pt;
+  &:hover {
+    color: $green;
+    transition: all 0.8s ease-in-out;
+  }
+  &.fa-star {
+    color: $grey;
+    &:hover {
+      color: $lilac;
+      transition: all 0.8s ease-in-out;
+    }
+  }
+}

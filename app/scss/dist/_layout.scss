@@ -1,0 +1,143 @@
+@import "variables";
+
+.container {
+  display: grid;
+  grid-template-columns: 80px minmax(40%, auto) 1fr;
+  height: 100vh;
+  width: 100%;
+  background: $white;
+
+  &--fullMap {
+    grid-template-columns: 80px 1fr;
+  }
+}
+
+.sidebar {
+  display: flex;
+  flex-flow: column nowrap;
+  align-items: center;
+  padding: 3em 0.5em;
+  background: $lilac;
+  &__logo {
+    width: 40px;
+    height: 40px;
+    object-fit: contain;
+  }
+  &__container {
+    height: fit-content;
+    height: -webkit-fit-content;
+    min-height: 40%;
+    display: inherit;
+    flex-flow: inherit;
+    justify-content: space-evenly;
+    margin-top: 30px;
+  }
+  &__link {
+  }
+  &__icon {
+    width: 40px;
+    height: 40px;
+    object-fit: contain;
+  }
+}
+
+.result {
+  max-height: 100vh;
+  max-width: 620px;
+  display: flex;
+  flex-flow: column nowrap;
+  padding: 5% 2%;
+  overflow-y: hidden;
+  &--hidden {
+    position: absolute;
+    left: -100%;
+  }
+  &__container {
+    overflow-y: scroll;
+    padding-right: 2%;
+  }
+  &__error {
+    width: 80%;
+    height: fit-content;
+    padding: 1%;
+    background: $tomato;
+    transform-origin: top;
+    transform: scaleY(0);
+    text-align: center;
+    color: $white;
+    transition: all 0.6s ease-in-out;
+    &--show {
+      transform: scaleY(1);
+      transition: all 0.6s ease-in-out;
+    }
+  }
+}
+
+.search {
+  //Busca
+  width: 100%;
+  height: max-content;
+  height: -webkit-max-content;
+  display: flex;
+  flex-wrap: nowrap;
+  // margin-bottom: 10px;
+}
+
+.input {
+  // configurações dos inputs
+  &__search {
+    height: 40px;
+    width: 80%;
+    padding: 0 2%;
+    background: $lightgrey;
+    border-radius: 12px 0 0 12px;
+    &--submit {
+      width: 20%;
+      height: 40px;
+      border-radius: 0px 12px 12px 0;
+      background: $lilac;
+      cursor: pointer;
+      font: {
+        size: 12pt;
+        weight: 600;
+      }
+      color: $white;
+      &:hover {
+        background: darken($lilac, 10%);
+        transition: all 0.6s ease-in-out;
+      }
+    }
+  }
+}
+
+.map {
+  position: relative;
+  z-index: 0;
+  width: 100%;
+  &__choose {
+    display: flex;
+    max-width: 60px;
+    max-height: 300px;
+    flex-flow: column nowrap;
+    z-index: 999;
+    position: absolute;
+    right: 30px;
+    top: 60%;
+  }
+  &__ico {
+    width: 60px;
+    height: 60px;
+    object-fit: contain;
+    border: 6px solid $green;
+    border-radius: 50% 50%;
+    margin: 5px;
+    box-shadow: 3px 3px 6px rgba(15, 15, 15, 0.3);
+    position: relative;
+    cursor: pointer;
+    &:hover {
+      transform: scale(1.1);
+      box-shadow: 3px 3px 8px rgba(15, 15, 15, 0.4);
+      transition: all 0.6s ease-in-out;
+    }
+  }
+}
